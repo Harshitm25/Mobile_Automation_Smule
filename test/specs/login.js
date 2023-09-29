@@ -1,4 +1,5 @@
 const login = require('../pageobjects/page.login');
+const credendtialsfilePath = require('../../credentials.json')
 describe("login", () => {
     it("should select language and move to login", async () => {
         await driver.pause(3000);
@@ -19,10 +20,10 @@ describe("login", () => {
 
     it("click on sign with email and get login", async () => {
         // await $('//*[@resource-id="com.smule.singandroid:id/email_button_view"]').click();
-        await login.setValueEmailBtn.setValue('harshit25@tv.com');
+        await login.setValueEmailBtn.setValue(credendtialsfilePath.username);
         // await $('//*[@resource-id="com.smule.singandroid:id/btn_next"]').click();
         await login.nextBtn.click();
-        await login.passwdBtn.addValue("harshit25");
+        await login.passwdBtn.addValue(credendtialsfilePath.password);
         await login.nextBtn.click();
 
         await driver.pause(5000)
