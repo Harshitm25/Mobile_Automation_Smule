@@ -5,7 +5,7 @@ exports.config = {
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
     runner: 'local',
-    port: 4724 ,
+    port: 4723,
     //
     // ==================
     // Specify Test Files
@@ -24,7 +24,7 @@ exports.config = {
     //
     specs: [
         // ToDo: define location for spec files here
-        './test/specs/**/*.js'
+        './test/specs/songbook.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -60,7 +60,7 @@ exports.config = {
         'appium:platformVersion': '11',
         'appium:automationName': 'UiAutomator2',
         'appium:app': '/Users/user/Downloads/smule-11-2-1.apk',
-       'appium:autoGrantPermissions':'true',
+        'appium:autoGrantPermissions': 'true',
 
     }],
 
@@ -142,8 +142,12 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
-
+    //reporters: ['spec'],
+    reporters: ['spec',['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: false,
+        disableWebdriverScreenshotsReporting: false,
+    }]],
 
     //
     // Options to be passed to Mocha.

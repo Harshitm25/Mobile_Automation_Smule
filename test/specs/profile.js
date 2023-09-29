@@ -8,8 +8,10 @@ describe("profile",()=>
     })
     it("1. navigating to profile page",async()=>
     {
+        await driver.pause(3000)
         await profile.profileBtn.click();
         await profile.profileBtn.click();
+        await driver.pause(3000)
         const userIDText=await profile.userIDText.getText();
         expect(userIDText).toBe("harshit2514");
         // expect ().toBeExisting();
