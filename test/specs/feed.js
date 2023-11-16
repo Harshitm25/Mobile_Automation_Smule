@@ -11,12 +11,10 @@ describe("feed block", () => {
     })
 
     it("the feed button should be clickable", async () => {
-        //let feedBtn= await $('//*[@text="Feed"]')
         expect(feed.feedBtn).toBeClickable()
     })
 
     it("feed buytton should get clicked and move the the feed page ", async () => {
-        // let feedBtnagian=await $('//*[@text="Feed"]')
         await feed.feedBtn.click();
         expect(await feed.feedTitle).toBeDisplayed();
 

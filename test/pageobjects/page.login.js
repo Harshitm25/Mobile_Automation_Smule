@@ -30,7 +30,6 @@ class Login{
 
     //3 it block
 
-   ///its for next btn resource id = get $('//*[@resource-id="com.smule.singandroid:id/editField"]')
     get passwdBtn()
     {
         return $('//*[@text="your password"]')

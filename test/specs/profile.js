@@ -14,7 +14,6 @@ describe("profile",()=>
         await driver.pause(3000)
         const userIDText=await profile.userIDText.getText();
         expect(userIDText).toBe("harshit2514");
-        // expect ().toBeExisting();
         await driver.pause(5000);
     })
 
@@ -27,7 +26,6 @@ describe("profile",()=>
     })
     it("3. scroll to bio and add bio",async()=>
     {
-        //resource-id=com.smule.singandroid:id/edit_bio;
         await profile.scrollableTillBio;
         await profile.editBio.addValue(text);
         await profile.saveBtn.click()

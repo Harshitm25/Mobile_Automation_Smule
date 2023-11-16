@@ -24,7 +24,7 @@ exports.config = {
     //
     specs: [
         // ToDo: define location for spec files here
-        './test/specs/songbook.js'
+        './test/specs/login.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -56,7 +56,7 @@ exports.config = {
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android',
         //browserName: 'Chrome',
-        'appium:deviceName': 'Pixel 3',
+        'appium:deviceName': '6.7  Horizontal Fold-in API 30',
         'appium:platformVersion': '11',
         'appium:automationName': 'UiAutomator2',
         'appium:app': '/Users/user/Downloads/smule-11-2-1.apk',
